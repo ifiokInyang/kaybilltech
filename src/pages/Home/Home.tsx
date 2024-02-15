@@ -9,7 +9,6 @@ import Portfolio from "../../component/Portfolio/Portfolio";
 import Reviews from "../../component/Reviews/Reviews";
 import Team from "../../component/Team/Team";
 import Enquiry from "../../component/Enquiry/Enquiry";
-import Footer from "../../component/Footer/Footer";
 
 const Home = () => {
 	return (
