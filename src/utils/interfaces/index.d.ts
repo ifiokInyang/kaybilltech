@@ -40,3 +40,10 @@ export interface TeamModalSScreenProps {
 	setIsSmallScreenServicesModal: React.Dispatch<React.SetStateAction<boolean>>;
 	isSmallScreenServicesModal: boolean;
 }
+
+export interface IFormProps {
+  firstName: string;
+  lastName: string;
+  email: string;
+  message: string;
+}

@@ -9,6 +9,8 @@ import Navbar from "./component/Navbar/Navbar";
 import Products from "./pages/Products/Products";
 import Footer from "./component/Footer/Footer";
 import ServicesNavigation from "./component/ServicesNavigation/ServicesNavigation";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsCondition/TermsAndConditions";
 
 function AppRoutes() {
 	const { pathname } = useLocation();
@@ -27,6 +29,8 @@ function AppRoutes() {
 				<Route path="/about" element={<About />} />
 				<Route path="/team" element={<Team />} />
 				<Route path="/products" element={<Products />} />
+				<Route path="/policy" element={<PrivacyPolicy />} />
+				<Route path="/terms_and_condition" element={<TermsAndConditions />} />
 				<Route path="/services/:service?" element={<ServicesNavigation />} />
 			</Routes>
 			<Footer />
