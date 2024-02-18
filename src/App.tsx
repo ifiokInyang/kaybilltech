@@ -11,6 +11,8 @@ import Footer from "./component/Footer/Footer";
 import ServicesNavigation from "./component/ServicesNavigation/ServicesNavigation";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsCondition/TermsAndConditions";
+import DataProvider from "./context";
+
 
 function AppRoutes() {
 	const { pathname } = useLocation();
@@ -40,9 +42,11 @@ function AppRoutes() {
 
 function App() {
 	return (
+			<DataProvider>
 		<BrowserRouter>
-			<AppRoutes />
+				<AppRoutes />
 		</BrowserRouter>
+			</DataProvider>
 	);
 }
 export default App;

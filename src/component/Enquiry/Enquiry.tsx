@@ -3,7 +3,6 @@ import emailIcon from "../../assets/sms.svg";
 import phoneIcon from "../../assets/call.svg";
 import Form from "../Form/Form";
 
-
 const Enquiry = ({ isQuotes }: { isQuotes: boolean }) => {
 	return (
     <div className="flex flex-wrap justify-between ss:w-[355px] sm:w-auto ss:px-4 md:px-12 mt-12">

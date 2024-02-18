@@ -3,8 +3,6 @@ import axios from "axios";
 import { apiUrl } from "../../utils/api/axios";
 import { formField, quoteField } from "../../utils/data";
 
-
-console.log("api is", apiUrl)
 const Form = ({ isQuotes }: { isQuotes: boolean }) => {
 	const [formDetails, setFormDetails] = useState(formField);
 	const [quoteFormDetails, setQuoteFormDetails] = useState(quoteField);
@@ -198,11 +196,21 @@ const Form = ({ isQuotes }: { isQuotes: boolean }) => {
 					type="submit"
 					className="bg-[#041831] w-[100%] rounded-lg uppercase text-white text-[16px] ss:mt-12 md:mt-16 mx-[2px] px-8 py-2 h-[44px] text-center text-base font-medium inline-block"
 				>
-					Send Message
+					{loading ? "Loading..." : "Send Message"}
 				</button>
-				<div>
-					<p className="text-red-400">{apiResponse}</p>
-				</div>
+				{apiResponse !== "" && (
+					<div className="relative bg-white">
+						<p className="text-[18px] bg-green-100 text-[#FF5733] p-4 mt-8 font-medium w-full">
+							{apiResponse}
+						</p>
+						<div
+							className="absolute top-0 md:right-10 ss:right-2 w-auto font-bold cursor-pointer"
+							onClick={() => setApiResponse("")}
+						>
+							X
+						</div>
+					</div>
+				)}
 			</form>
 		</div>
 	);
