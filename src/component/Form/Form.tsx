@@ -4,7 +4,7 @@ import { apiUrl } from "../../utils/api/axios";
 import { formField, quoteField } from "../../utils/data";
 
 
-
+console.log("api is", apiUrl)
 const Form = ({ isQuotes }: { isQuotes: boolean }) => {
 	const [formDetails, setFormDetails] = useState(formField);
 	const [quoteFormDetails, setQuoteFormDetails] = useState(quoteField);
