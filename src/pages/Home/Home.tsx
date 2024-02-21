@@ -12,6 +12,12 @@ import Enquiry from "../../component/Enquiry/Enquiry";
 import { useAuth } from "../../context";
 import axios, { AxiosResponse } from "axios";
 import { apiUrl } from "../../utils/api/axios";
+import {
+	IDevProducts,
+	IHomeDataProps,
+	IServicesHomeprops,
+} from "../../utils/interfaces";
+import { homeDevProductsInitial, homeInitialStateData } from "../../utils/data";
 
 const Home = () => {
 	// const { HomeDataFunc, homeData } = useAuth as any;
@@ -22,7 +28,14 @@ const Home = () => {
 	// 	}
 	// 	void fetchData();
 	// }, []);
-	const [homeData, setHomeData] = useState([]);
+	const [homeData, setHomeData] =
+		useState<IHomeDataProps>(homeInitialStateData);
+	const [servicesData, setServicesData] = useState<IServicesHomeprops[]>([
+		{ serviceTitle: "", description: "", category: "" },
+	]);
+	const [developedProducts, setDevelopedProducts] = useState<IDevProducts[]>(
+		homeDevProductsInitial
+	);
 	const [loading, setLoading] = useState<boolean>(true);
 	const [error, setError] = useState<string | null>(null);
 
@@ -34,8 +47,9 @@ const Home = () => {
 			const { data } = response.data;
 			if (response.status === 200) {
 				setLoading(false);
-				console.log("res data is ", data);
-				setHomeData(data);
+				setHomeData(data.homeHero);
+				setServicesData(data.ourServices);
+				setDevelopedProducts(data.developedProducts);
 			}
 		} catch (err: any) {
 			setLoading(false);
@@ -52,13 +66,13 @@ const Home = () => {
 	}, []);
 	return (
 		<>
-			<HomeComp1 />
+			<HomeComp1 data={homeData} />
 			<LogoSlider />
-			<ServicesHome />
+			<ServicesHome data={servicesData} />
 			<BusScalability />
 			<RelationshipHomeComp />
-			<WhyUs />
-			<Portfolio />
+			<WhyUs data={homeData} />
+			<Portfolio data={developedProducts} />
 			<Reviews />
 			<Team />
 			<Enquiry isQuotes={false} />
@@ -67,6 +81,3 @@ const Home = () => {
 };
 
 export default Home;
-function fetchData() {
-	throw new Error("Function not implemented.");
-}

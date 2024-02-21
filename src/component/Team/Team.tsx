@@ -12,7 +12,7 @@ const Teams = () => {
 					OUR TEAM
 				</h1>
 				<h1 className="ss:text-[30px] md:text-[36px] text-[#041831] font-bold mb-[100px]">
-					Team members
+					Team Members
 				</h1>
 				<div className="flex justify-around items-center flex-wrap ss:space-y-24 md:space-y-0 space-x-8">
 					{teamMembers.map((team: TeamProps, index: number) => (
