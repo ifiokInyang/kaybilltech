@@ -13,7 +13,6 @@ import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsCondition/TermsAndConditions";
 import DataProvider from "./context";
 
-
 function AppRoutes() {
 	const { pathname } = useLocation();
 
