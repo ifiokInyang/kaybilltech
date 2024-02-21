@@ -29,11 +29,6 @@ export interface TeamProps {
 	handle: string;
 	alt: string;
 }
-
-export interface ServiceProps {
-	service?: string;
-}
-
 export interface TeamModalSScreenProps {
 	teamsModal: boolean;
 	setTeamsModal: React.Dispatch<React.SetStateAction<boolean>>;
@@ -42,8 +37,35 @@ export interface TeamModalSScreenProps {
 }
 
 export interface IFormProps {
-  firstName: string;
-  lastName: string;
-  email: string;
-  message: string;
+	firstName: string;
+	lastName: string;
+	email: string;
+	message: string;
+}
+
+export interface IHomeDataProps {
+	description: string;
+	subTitle: string;
+	title: string;
+	whyUs: string;
+}
+
+export interface IServicesHomeprops {
+	category: string;
+	description: string;
+	serviceTitle: string;
+}
+
+export interface IDevProducts {
+	name: string;
+	description: string;
+	logoPath: string;
+	numberOfUsers: string;
+	clientName: string;
+}
+
+export interface ServiceProps {
+	service?: string;
+	selectedItem: number | null;
+	data: IServicesHomeprops[];
 }

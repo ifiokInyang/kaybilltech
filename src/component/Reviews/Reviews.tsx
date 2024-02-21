@@ -9,7 +9,7 @@ const Reviews = () => {
       <div className="flex flex-col justify-center text-center ss:w-[355px] sm:w-full md:w-[700px]">
         <h1 className="py-8 text-[16px] font-medium text-[#2979FF]">REVIEWS</h1>
         <h1 className="ss:text-[30px] md:text-[36px] text-[#041831] font-bold mb-[20px]">
-          clients testimony
+          Clients Testimony
         </h1>
         <div className="flex mx-auto w-[100px] justify-center relative">
           <img src={reviewThree} alt="" className="mr-4" />

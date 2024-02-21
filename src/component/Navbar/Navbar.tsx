@@ -108,7 +108,7 @@ const Navbar = () => {
 								type="button"
 								onClick={handleAbout}
 							>
-								About us{" "}
+								About Us{" "}
 							</button>
 							<IoMdArrowDropdown size={20} onClick={handleAboutClick} />
 
@@ -124,7 +124,7 @@ const Navbar = () => {
 								className="menu-hover flex items-center lg:text-sm font-normal sm:text-base rounded md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
 								onClick={handleServices}
 							>
-								services <IoMdArrowDropdown size={20} />
+								Services <IoMdArrowDropdown size={20} />
 							</button>
 						</div>
 

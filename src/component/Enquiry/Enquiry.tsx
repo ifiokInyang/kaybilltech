@@ -12,7 +12,7 @@ const Enquiry = ({ isQuotes }: { isQuotes: boolean }) => {
         </h1>
 
         <h1 className="ss:text-[30px] md:text-[38px] text-[#041831] font-bold pb-12">
-          Get in touch{' '}
+          Get in Touch{' '}
         </h1>
         <p className="font-light">
           Heads up! We require that you sign up for Kaybill tech services and

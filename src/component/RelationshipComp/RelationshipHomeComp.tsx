@@ -20,7 +20,7 @@ const RelationshipHomeComp = () => {
 						We are your business partner{" "}
 					</h1>
 				</div>
-				<p className="ss:tracking-tight md:tracking-wide ss:w-auto md:w-[650px] font-light text-[#39404F]">
+				<p className="ss:tracking-tight md:tracking-wide ss:w-auto md:w-[650px] text-[18px] font-light text-[#39404F]">
 					We emphasize building strategic partnerships rather than solely
 					focusing on customer acquisition. Our approach mirrors that of a
 					business owner, and we maintain transparency in our operations,

@@ -1,8 +1,9 @@
 import React from "react";
 import CountUp from "react-countup";
 import blueCircle from "../../assets/blueCircle.svg";
+import { IHomeDataProps } from "../../utils/interfaces";
 
-const WhyUs = () => {
+const WhyUs = ({ data }: { data: IHomeDataProps }) => {
 	return (
 		<div className="flex flex-col flex-wrap ss:px-4 md:px-8 ss:mt-[80px] md:mt-[120px] ss:w-[355px] sm:w-full justify-between">
 			<div className="flex-1">
@@ -11,14 +12,10 @@ const WhyUs = () => {
 				<h1 className="ss:text-[30px] md:text-[40px] text-[#041831] font-bold pb-[12px]">
 					Why choose us?{" "}
 				</h1>
-				<p className="font-light text-[#39404F] text-left ss:w-full md:w-[52%] ss:mb-24 md:mb-0">
-					Our range of services is tailored for businesses seeking to establish
-					a robust online presence and enhance their online visibility. Our
-					overarching philosophy centers on simplifying the lives of business
-					owners by providing a comprehensive suite of services that seamlessly
-					complement each other. This includes services such as website
-					development, web design, UI/UX design, database management, and custom
-					software development.
+				<p className="font-light text-[#39404F] text-[18px] text-left ss:w-full md:w-[52%] ss:mb-24 md:mb-0">
+					{data.whyUs.length > 0
+						? data.whyUs
+						: "Our range of services is tailored for businesses seeking to establish a robust online presence and enhance their online visibility. Our overarching philosophy centers on simplifying the lives of business owners by providing a comprehensive suite of services that seamlessly complement each other. This includes services such as website development, web design, UI/UX design, database management, and custom software development."}
 				</p>
 			</div>
 			<div className="flex flex-wrap text-[36px] md:space-x-2 lg:space-x-0 font-bold w-full items-center ss:justify-center md:justify-around">
@@ -38,7 +35,7 @@ const WhyUs = () => {
 						/>
 					</div>
 					<h3 className="text-[24px] text-center">Planning</h3>
-					<p className="text-[14px] font-light text-[#39404F] text-center w-[70%]">
+					<p className="text-[16px] font-light text-[#39404F] text-center w-[70%]">
 						We plan with our clients and work towards the same goal of
 						delivering ahead of time
 					</p>
@@ -59,7 +56,7 @@ const WhyUs = () => {
 						/>
 					</div>
 					<h3 className="text-[24px]">Processing</h3>
-					<p className="text-[14px] font-light text-[#39404F] text-center w-[70%]">
+					<p className="text-[16px] font-light text-[#39404F] text-center w-[70%]">
 						We engage our clients during the process of giving the astonishing
 						products
 					</p>
@@ -80,7 +77,7 @@ const WhyUs = () => {
 						/>
 					</div>
 					<h3 className="text-[24px]">Engaging</h3>
-					<p className="text-[14px] font-light text-[#39404F] text-center w-[70%]">
+					<p className="text-[16px] font-light text-[#39404F] text-center w-[70%]">
 						We engage with our clients to give the best view of there products
 						and bring it to life
 					</p>
@@ -101,7 +98,7 @@ const WhyUs = () => {
 						/>
 					</div>
 					<h3 className="text-[24px]">Result</h3>
-					<p className="text-[14px] font-light text-[#39404F] text-center w-[70%]">
+					<p className="text-[16px] font-light text-[#39404F] text-center w-[70%]">
 						The result we give our clients are always spectacular and highly
 						delivered to taste
 					</p>
