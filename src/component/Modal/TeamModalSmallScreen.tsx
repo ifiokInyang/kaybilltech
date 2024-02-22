@@ -38,7 +38,7 @@ const TeamModalSmallScreen = ({
 								className="my-2 block p-8 text-black md:mx-0"
 								onClick={() => setTeamsModal(false)}
 							>
-								Our team
+								Our Team
 							</Link>
 						</div>
 					</div>
@@ -64,43 +64,43 @@ const TeamModalSmallScreen = ({
 								className="my-2 block p-8 text-black md:mx-0"
 								onClick={() => handleServiceNavigation("api")}
 							>
-								API development
+								API Development
 							</div>
 							<div
 								className="my-2 block p-8 text-black md:mx-0"
 								onClick={() => handleServiceNavigation("softwareDev")}
 							>
-								Custom software development
+								Custom Software Development
 							</div>{" "}
 							<div
 								className="my-2 block p-8 text-black md:mx-0"
 								onClick={() => handleServiceNavigation("webDesign")}
 							>
-								website design
+								Website Design
 							</div>{" "}
 							<div
 								className="my-2 block p-8 text-black md:mx-0"
 								onClick={() => handleServiceNavigation("webAndMobDev")}
 							>
-								Web & mobile application development
+								Web & Mobile Application Development
 							</div>{" "}
 							<div
 								className="my-2 block p-8 text-black md:mx-0"
 								onClick={() => handleServiceNavigation("uiux")}
 							>
-								UI/UX design
+								UI/UX Design
 							</div>{" "}
 							<div
 								className="my-2 block p-8 text-black md:mx-0"
 								onClick={() => handleServiceNavigation("dbMgt")}
 							>
-								Database management
+								Database Management
 							</div>{" "}
 							<div
 								className="my-2 block p-8 text-black md:mx-0"
 								onClick={() => handleServiceNavigation("aspdotnet")}
 							>
-								ASP.NET training
+								ASP.NET Training
 							</div>
 						</div>
 					</div>
