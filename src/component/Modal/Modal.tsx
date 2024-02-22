@@ -64,7 +64,7 @@ export default function SmallScreenModal({
 								</div>
 								<div className="flex w-[58%] items-start justify-between p-5 mb-4 rounded-t">
 									<Link to={"#"} onClick={handleServiceModal} className="flex">
-										<h3 className="text-[14px] hover:text-black">services</h3>
+										<h3 className="text-[14px] hover:text-black">Services</h3>
 										<IoMdArrowDropdown size={25} />
 									</Link>
 								</div>
