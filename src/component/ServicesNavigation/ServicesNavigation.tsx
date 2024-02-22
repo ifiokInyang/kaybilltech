@@ -15,13 +15,27 @@ const ServicesNavigation = () => {
 
 	return (
 		<>
-			{service === "api" && <ServicesSubOne service="api" />}
-			{service === "software" && <ServicesSubTwo service="software" />}
-			{service === "uiux" && <ServicesSubFive service="uiux" />}
-			{service === "aspdotnet" && <ServicesSubSeven service="aspdotnet" />}
-			{service === "webDesign" && <ServicesSubThree service="webDesign" />}
-			{service === "webAndMobDev" && <ServicesSubFour service="webAndMobDev" />}
-			{service === "dbMgt" && <ServicesSubSix service="dbMgt" />}
+			{service === "api" && (
+				<ServicesSubOne service="api" selectedItem={null} data={[]} />
+			)}
+			{service === "software" && (
+				<ServicesSubTwo service="software" selectedItem={null} data={[]} />
+			)}
+			{service === "uiux" && (
+				<ServicesSubFive service="uiux" selectedItem={null} data={[]} />
+			)}
+			{service === "aspdotnet" && (
+				<ServicesSubSeven service="aspdotnet" selectedItem={null} data={[]} />
+			)}
+			{service === "webDesign" && (
+				<ServicesSubThree service="webDesign" selectedItem={null} data={[]} />
+			)}
+			{service === "webAndMobDev" && (
+				<ServicesSubFour service="webAndMobDev" selectedItem={null} data={[]} />
+			)}
+			{service === "dbMgt" && (
+				<ServicesSubSix service="dbMgt" selectedItem={null} data={[]} />
+			)}
 
 			<Portfolio />
 			<Enquiry isQuotes={false} />
