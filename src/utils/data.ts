@@ -4,6 +4,7 @@ export const formField: IFormProps = {
 	firstName: "",
 	lastName: "",
 	email: "",
+	phone: "",
 	message: "",
 };
 export const quoteField = {
