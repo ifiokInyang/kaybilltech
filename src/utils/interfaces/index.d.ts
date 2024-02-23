@@ -40,6 +40,7 @@ export interface IFormProps {
 	firstName: string;
 	lastName: string;
 	email: string;
+	phone: string;
 	message: string;
 }
 
