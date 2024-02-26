@@ -24,7 +24,7 @@ const ServicesSubFour = ({ service }: ServiceProps) => {
 					WEB & MOBILE APPLICATION DEVELOPMENT{" "}
 				</h1>
 				<h1 className="ss:text-[24px] md:text-[28px] font-bold pb-[12px]">
-					Web & mobile application development{" "}
+					Web & Mobile Application Development{" "}
 				</h1>
 				<p className="ss:tracking-tight md:tracking-wider font-normal text-[#39404F]">
 					Innovative Mobile Solutions for the Digital Age: Our mobile

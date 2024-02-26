@@ -16,7 +16,7 @@ const RelationshipHomeComp = () => {
 					RELATIONSHIP{" "}
 				</h1>
 				<div className="w-[70%]">
-					<h1 className="ss:text-[36px] md:text-[40px] font-bold ss:pt-4 md:pt-0 pb-[14px]">
+					<h1 className="ss:text-[36px] capitalize md:text-[40px] font-bold ss:pt-4 md:pt-0 pb-[14px]">
 						We are your business partner{" "}
 					</h1>
 				</div>

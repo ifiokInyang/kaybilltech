@@ -9,7 +9,7 @@ const BusScalability = () => {
           BUSINESS SCALABILITY
         </h1>
 
-        <h1 className="ss:text-[30px] md:text-[40px] text-[#041831] font-bold pb-[12px]">
+        <h1 className="ss:text-[30px] md:text-[40px] capitalize text-[#041831] font-bold pb-[12px]">
           How Kaybill tech increase business growth
         </h1>
         <h2 className="py-4 text-[18px] font-semibold">

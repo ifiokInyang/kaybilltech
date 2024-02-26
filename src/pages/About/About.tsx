@@ -22,7 +22,7 @@ const About = () => {
 						Our mission & value
 					</h1>
 					<h4 className="text-[#041831] text-[24px] font-bold mt-8 mb-[29px]">
-						Our mission
+						Our Mission
 					</h4>
 					<p className="ss:w-auto md:w-[50%]">
 						"At KayBillTech, our mission is to empower businesses with
@@ -33,7 +33,7 @@ const About = () => {
 						transform ideas into reality."
 					</p>
 					<h4 className="text-[#041831] text-[24px] font-bold mt-16 mb-[29px]">
-						Core values
+						Core Values
 					</h4>
 					<div className="flex flex-wrap ss:space-y-8 md:space-y-0 ss:space-x-0 md:space-x-12">
 						<div className="ss:flex-0 md:flex-1">

@@ -40,7 +40,7 @@ const ServicesSubOne = ({ service, selectedItem, data }: ServiceProps) => {
         <h1 className="text-[28px] font-bold pb-[12px]">
           {selectedItemData != null
             ? selectedItemData.serviceTitle
-            : 'API development'}
+            : 'API Development'}
         </h1>
         <p className="ss:tracking-tight md:tracking-wider font-normal  text-[18px] text-[#39404F]">
           {selectedItemData != null
@@ -64,7 +64,7 @@ const ServicesSubOne = ({ service, selectedItem, data }: ServiceProps) => {
       </div>
       <div className="md:w-[55%] ss:w-full flex items-center justify-center ss:order-1 md:order-2">
         <img
-          src={selectedItem !== null ? images[selectedItem] : ''}
+          src={selectedItem !== null ? images[selectedItem] : apiDevImg}
           alt="two developers collaborating using a chart/board"
           className=""
         />

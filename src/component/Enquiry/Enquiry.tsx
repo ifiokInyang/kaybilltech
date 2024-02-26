@@ -1,10 +1,10 @@
-import React from "react";
-import emailIcon from "../../assets/sms.svg";
-import phoneIcon from "../../assets/call.svg";
-import Form from "../Form/Form";
+import React from 'react';
+import emailIcon from '../../assets/sms.svg';
+import phoneIcon from '../../assets/call.svg';
+import Form from '../Form/Form';
 
 const Enquiry = ({ isQuotes }: { isQuotes: boolean }) => {
-	return (
+  return (
     <div className="flex flex-wrap justify-between ss:w-[355px] sm:w-auto ss:px-4 md:px-12 mt-12">
       <div className="ss:w-[400px] sm:w-auto ss:flex-0 md:flex-1 ss:mb-16 md:mb-0">
         <h1 className="pb-4 text-[16px] font-medium text-[#2979FF]">
@@ -12,7 +12,7 @@ const Enquiry = ({ isQuotes }: { isQuotes: boolean }) => {
         </h1>
 
         <h1 className="ss:text-[30px] md:text-[38px] text-[#041831] font-bold pb-12">
-          Get in Touch{' '}
+          Get In Touch{' '}
         </h1>
         <p className="font-light">
           Heads up! We require that you sign up for Kaybill tech services and
@@ -29,10 +29,11 @@ const Enquiry = ({ isQuotes }: { isQuotes: boolean }) => {
           <div className="bg-[#2979FF] flex rounded-lg p-2 space-x-2">
             <img src={phoneIcon} alt="call icon" />
 
-            <p>+234 (893) 475- 8921</p>
+            <p>+234 (0) 907-920-3331</p>
           </div>
         </div>
       </div>
+
       <div className="ss:w-[400px] sm:w-full ss:flex-0 md:flex-2 lg:flex-1">
         <Form isQuotes={isQuotes} />
       </div>
