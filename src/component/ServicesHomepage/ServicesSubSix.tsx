@@ -17,7 +17,7 @@ const ServicesSubSix = ({ service }: ServiceProps) => {
 			{" "}
 			<div className="flex-1 mt-[52px] ss:order-2 md:order-1">
 				<h1 className="py-8 text-[16px] text-[#2979FF]">DATABASE MANAGEMENT</h1>
-				<h1 className="text-[28px] font-bold pb-[12px]">Database management</h1>
+				<h1 className="text-[28px] font-bold pb-[12px]">Database Management</h1>
 				<p className="ss:tracking-tight md:tracking-wider font-normal text-[#39404F]">
 					Efficient Data Handling for Informed Decision-Making: Our database
 					management services revolve around organizing, storing, and optimizing

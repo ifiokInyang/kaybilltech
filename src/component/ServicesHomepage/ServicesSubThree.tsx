@@ -23,8 +23,8 @@ const ServicesSubThree = ({ service }: ServiceProps) => {
 				>
 					WEBSITE DESIGN
 				</h1>
-				<h1 className="text-[28px] md:uppercase ss:lowercase font-bold pb-[12px]">
-					WEBSITE DESIGN
+				<h1 className="text-[28px] capitalize font-bold pb-[12px]">
+					Website Design
 				</h1>
 				<p className="ss:tracking-tight md:tracking-wider font-normal text-[#39404F]">
 					Crafting Digital Experiences that Captivate: Our website design

@@ -9,8 +9,8 @@ const WhyUs = ({ data }: { data: IHomeDataProps }) => {
 			<div className="flex-1">
 				<h1 className="py-8 text-[16px] font-medium text-[#2979FF]">WHY US </h1>
 
-				<h1 className="ss:text-[30px] md:text-[40px] text-[#041831] font-bold pb-[12px]">
-					Why choose us?{" "}
+				<h1 className="ss:text-[30px] capitalize md:text-[40px] text-[#041831] font-bold pb-[12px]">
+					Why Choose us?{" "}
 				</h1>
 				<p className="font-light text-[#39404F] text-[18px] text-left ss:w-full md:w-[52%] ss:mb-24 md:mb-0">
 					{data.whyUs.length > 0

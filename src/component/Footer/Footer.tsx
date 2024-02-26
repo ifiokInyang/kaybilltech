@@ -1,13 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import emailIcon from "../../assets/sms.svg";
-import phoneIcon from "../../assets/call.svg";
-import location from "../../assets/location.svg";
-import instagram from "../../assets/instagram.svg";
-import facebook from "../../assets/facebook.svg";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import emailIcon from '../../assets/sms.svg';
+import phoneIcon from '../../assets/call.svg';
+import location from '../../assets/location.svg';
+import instagram from '../../assets/instagram.svg';
+import facebook from '../../assets/facebook.svg';
 
 const Footer = () => {
-	return (
+  return (
     <>
       <footer className="bg-[#292D32] dark:bg-gray-900 ss:w-[355px] sm:w-auto ss:mt-4 md:mt-16 ss:p-2 md:p-12">
         <div className="flex flex-wrap ss:space-y-24 md:space-y-0 ss:px-4 text-white">
@@ -21,7 +21,9 @@ const Footer = () => {
               businesses of all sizes. We specialize in developing software
               applications and services tailored to meet the unique needs and
               challenges of our clients...
-              <span className="font-bold">Read more</span>
+              <Link to={'/about'} className="font-bold">
+                Read more
+              </Link>
             </p>
           </div>
 
@@ -45,7 +47,7 @@ const Footer = () => {
                   alt="call icon"
                   className="ss:ml-0 md:ml-4 mr-2"
                 />
-                +234 (893) 475- 8921
+                +234 (0) 907-920-3331
               </li>
               <li className="flex mb-4">
                 {' '}
@@ -83,39 +85,60 @@ const Footer = () => {
             </h2>
             <ul className="dark:text-gray-400 font-medium text-[14px]">
               <li className="mb-4">
-                <Link to={'#'} className="hover:underline text-[white]">
+                <Link
+                  to={'/services/software'}
+                  className="hover:underline capitalize text-[white]"
+                >
                   Custom software development{' '}
                 </Link>
               </li>
 
               <li className="mb-4">
-                <Link to={'#'} className="hover:underline text-[white]">
-                  API development{' '}
+                <Link
+                  to={'/services/api'}
+                  className="hover:underline capitalize text-[white]"
+                >
+                  API Development{' '}
                 </Link>
               </li>
               <li className="mb-4">
-                <Link to={'#'} className="hover:underline text-[white]">
+                <Link
+                  to={'/services/webDesign'}
+                  className="hover:underline capitalize text-[white]"
+                >
                   Website design{' '}
                 </Link>
               </li>
               <li className="mb-4">
-                <Link to={'#'} className="hover:underline text-[white]">
+                <Link
+                  to={'/services/webAndMobDev'}
+                  className="hover:underline capitalize text-[white]"
+                >
                   Web/mobile application development{' '}
                 </Link>
               </li>
               <li className="mb-4">
-                <Link to={'#'} className="hover:underline text-[white]">
+                <Link
+                  to={'/services/uiux'}
+                  className="hover:underline text-[white]"
+                >
                   UI/UX Design{' '}
                 </Link>
               </li>
               <li className="mb-4">
-                <Link to={'#'} className="hover:underline text-[white]">
+                <Link
+                  to={'/services/dbMgt'}
+                  className="hover:underline capitalize text-[white]"
+                >
                   Database management{' '}
                 </Link>
               </li>
               <li className="mb-4">
-                <Link to={'#'} className="hover:underline text-[white]">
-                  ASP.NET training{' '}
+                <Link
+                  to={'/services/aspdotnet'}
+                  className="hover:underline text-[white]"
+                >
+                  ASP.NET Training{' '}
                 </Link>
               </li>
             </ul>

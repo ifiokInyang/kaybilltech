@@ -17,7 +17,7 @@ const ServicesSubSeven = ({ service }: ServiceProps) => {
 			{" "}
 			<div className="flex-1 mt-[52px] ss:order-2 md:order-1">
 				<h1 className="py-8 text-[16px] text-[#2979FF]">ASP.NET TRAINING </h1>
-				<h1 className="text-[28px] font-bold pb-[12px]">ASP.net training</h1>
+				<h1 className="text-[28px] font-bold pb-[12px]">ASP.Net Training</h1>
 				<p className="ss:tracking-tight md:tracking-wider font-normal text-[#39404F]">
 					Comprehensive Web Development with C# and .NET Framework - From
 					Beginner to Advanced, Building Scalable Web Applications with MVC, Web

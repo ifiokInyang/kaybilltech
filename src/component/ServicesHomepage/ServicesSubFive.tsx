@@ -23,7 +23,7 @@ const ServicesSubFive = ({ service }: ServiceProps) => {
 				>
 					UI/UX DESIGN
 				</h1>
-				<h1 className="text-[28px] font-bold pb-[12px]">UI/UX design</h1>
+				<h1 className="text-[28px] font-bold pb-[12px]">UI/UX Design</h1>
 				<p className="ss:tracking-tight md:tracking-wider font-normal text-[#39404F]">
 					User-Centric Design for Memorable Interactions: Our UI/UX design
 					services focus on creating interfaces that not only look aesthetically

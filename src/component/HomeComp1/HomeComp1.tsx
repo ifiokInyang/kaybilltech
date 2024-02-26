@@ -10,7 +10,7 @@ const HomeComp1 = ({ data }: { data: IHomeDataProps }) => {
 	return (
 		<div className="flex flex-wrap ss:flex-col md:flex-row justify-between  ss:pl-0 md:pl-[60px] ss:w-[355px] sm:w-full">
 			<div className="ss:w-full lg:w-[43%] ss:px-4 md:px-0 ss:order-2 lg:order-1">
-				<h1 className="font-bold ss:text-[27px] md:text-[56px] text-left ss:pt-0 lg:pt-[105px]">
+				<h1 className="font-bold ss:text-[27px] md:text-[56px] text-left ss:pt-0 lg:pt-[105px] capitalize">
 					{data.title.length > 0
 						? data.title
 						: "Develop your projects and scale your business"}

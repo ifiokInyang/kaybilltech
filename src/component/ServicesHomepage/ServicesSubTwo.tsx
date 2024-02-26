@@ -19,7 +19,7 @@ const ServicesSubTwo = ({ service }: ServiceProps) => {
 					CUSTOM SOFTWARE DEVELOPMENT{" "}
 				</h1>
 				<h1 className="text-[28px] font-bold pb-[12px]">
-					Custom software development
+					Custom Software Development
 				</h1>
 				<p className="ss:tracking-tight md:tracking-wider font-normal text-[#39404F]">
 					Tailored Solutions for Unique Challenges: Our custom software
