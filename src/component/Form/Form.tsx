@@ -38,6 +38,9 @@ const Form = ({ isQuotes }: { isQuotes: boolean }) => {
 				setApiResponse(apiResponse.data.message);
 				setFormDetails(formField);
 				setQuoteFormDetails(quoteField);
+				setTimeout(() => {
+					setApiResponse("");
+				}, 5000);
 			}
 		} catch (error: any) {
 			setLoading(false);
@@ -216,7 +219,7 @@ const Form = ({ isQuotes }: { isQuotes: boolean }) => {
 				</button>
 				{apiResponse !== "" && (
 					<div className="relative bg-white">
-						<p className="text-[18px] bg-green-100 text-[#FF5733] p-4 mt-8 font-medium w-full">
+						<p className="text-[18px] bg-green-100 p-4 mt-8 font-medium w-full">
 							{apiResponse}
 						</p>
 						<div
