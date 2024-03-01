@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import homeImg1 from "../../assets/homepageImg1.svg";
+import homeImg1 from "../../assets/homeImg1.png";
 import Button from "../Button/Button";
 import { IHomeDataProps } from "../../utils/interfaces";
 
