@@ -12,6 +12,7 @@ import ServicesNavigation from "./component/ServicesNavigation/ServicesNavigatio
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsCondition/TermsAndConditions";
 import DataProvider from "./context";
+import Teams from "./component/Team/Team";
 
 function AppRoutes() {
 	const { pathname } = useLocation();
@@ -28,7 +29,7 @@ function AppRoutes() {
 				<Route path="/quote" element={<Quotes />} />
 				<Route path="/contact" element={<Contact />} />
 				<Route path="/about" element={<About />} />
-				<Route path="/team" element={<Team />} />
+				<Route path="/team" element={<Teams />} />
 				<Route path="/products" element={<Products />} />
 				<Route path="/policy" element={<PrivacyPolicy />} />
 				<Route path="/terms_and_condition" element={<TermsAndConditions />} />

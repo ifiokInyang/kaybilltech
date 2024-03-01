@@ -16,8 +16,9 @@ import {
 	IDevProducts,
 	IHomeDataProps,
 	IServicesHomeprops,
+	TeamProps,
 } from "../../utils/interfaces";
-import { homeDevProductsInitial, homeInitialStateData } from "../../utils/data";
+import { homeDevProductsInitial, homeInitialStateData, teamInitial } from "../../utils/data";
 
 const Home = () => {
 	// const { HomeDataFunc, homeData } = useAuth as any;
@@ -36,6 +37,7 @@ const Home = () => {
 	const [developedProducts, setDevelopedProducts] = useState<IDevProducts[]>(
 		homeDevProductsInitial
 	);
+	const [team, setTeam] = useState<TeamProps[]>(teamInitial)
 	const [loading, setLoading] = useState<boolean>(true);
 	const [error, setError] = useState<string | null>(null);
 
@@ -50,6 +52,7 @@ const Home = () => {
 				setHomeData(data.homeHero);
 				setServicesData(data.ourServices);
 				setDevelopedProducts(data.developedProducts);
+				setTeam(data.teamMembers)
 			}
 		} catch (err: any) {
 			setLoading(false);
