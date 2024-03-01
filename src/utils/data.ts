@@ -77,3 +77,16 @@ export const homeDevProductsInitial = [
 		clientName: "",
 	},
 ];
+
+export const teamInitial = [
+	{
+		profileImagePath: "",
+		position: "",
+		linkedProfileUrl: "",
+		memberId: "",
+		linkedInUserName: "",
+		name: "",
+		gitHubUserName: "",
+		twitterHandle: "",
+	},
+];

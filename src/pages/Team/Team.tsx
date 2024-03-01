@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { teamMembersPage } from "./TeamArr";
 import { TeamProps } from "../../utils/interfaces";
 
-const Teams = () => {
+const Team = () => {
 	return (
 		<div className="flex items-center justify-center ss:mt-12 md:mt-[100px] ss:mb-[150px] md:mb-[20px]">
 			<div className="text-center ss:w-[355px] sm:w-full">
@@ -12,7 +12,7 @@ const Teams = () => {
 					<span className="ss:lowercase md:uppercase">members</span>
 				</h1>
 				<div className="flex justify-around items-center ss:w-[380px] md:w-full ss:h-auto md:h-[900px] flex-wrap ss:space-y-24 md:space-y-0 space-x-8 ss:px:0 md:px-16">
-					{teamMembersPage.map((team: TeamProps, index: number) => (
+					{teamMembersPage.map((team, index: number) => (
 						<div key={index} className="">
 							<img src={team.img} alt="" />
 							<h1 className="mt-8 mb-2 text-[24px] font-bold text-[#39404F]">
@@ -33,4 +33,4 @@ const Teams = () => {
 	);
 };
 
-export default Teams;
+export default Team;

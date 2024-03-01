@@ -18,7 +18,7 @@ const Portfolio = ({ data }: { data?: IDevProducts[] }) => {
 					Developed Products
 				</h1>
 			</div>
-			<div className="flex flex-wrap ss:px-[8px] md:px-auto w-full justify-between ss:text-[12px] md:text-[16px]">
+			<div className="flex flex-wrap ss:px-[8px] md:px-0 w-full ss:justify-between md:justify-around ss:text-[12px] md:text-[16px]">
 				{renderedData?.map((item, index) => (
 					<div key={index} className="ss:w-[120px] sm:w-[150px] md:w-auto">
 						<div

@@ -23,11 +23,14 @@ export interface ServicesModalProp {
 }
 
 export interface TeamProps {
-	img: string;
-	desc: string;
-	linkedIn: string;
-	handle: string;
-	alt: string;
+	profileImagePath: string;
+	position: string;
+	linkedProfileUrl: string;
+	memberId: string;
+	linkedInUserName: string;
+	name: string;
+	gitHubUserName: string;
+	twitterHandle: string
 }
 export interface TeamModalSScreenProps {
 	teamsModal: boolean;
