@@ -33,7 +33,7 @@ const HomeComp1 = ({ data }: { data: IHomeDataProps }) => {
 				<img
 					src={homeImg1}
 					alt="a man sitting in front of his desktop computer"
-					className="lg:pl-[40px] ss:pl-0 ss:w-[400px] md:w-[100%] ss:h-[430px] md:h-[100%] object-cover"
+					className="lg:pl-[40px] ss:pl-0 ss:w-[100%] md:w-[100%] ss:h-[100%] md:h-[100%] object-cover"
 					//   width={'200px'}
 				/>
 			</div>

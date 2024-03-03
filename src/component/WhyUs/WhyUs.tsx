@@ -5,7 +5,7 @@ import { IHomeDataProps } from "../../utils/interfaces";
 
 const WhyUs = ({ data }: { data: IHomeDataProps }) => {
 	return (
-		<div className="flex flex-col flex-wrap ss:px-4 md:px-8 ss:mt-[80px] md:mt-[120px] ss:w-[355px] sm:w-full justify-between">
+		<div className="flex flex-col flex-wrap ss:px-4 md:px-8 ss:mt-[40px] md:mt-2 ss:w-[355px] sm:w-full justify-between">
 			<div className="flex-1">
 				<h1 className="py-8 text-[16px] font-medium text-[#2979FF]">WHY US </h1>
 

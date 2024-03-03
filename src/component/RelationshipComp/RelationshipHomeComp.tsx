@@ -1,12 +1,12 @@
 import React from "react";
-import handshake from "../../assets/handshakeRelationship.svg";
+import BusPartnerImg from '../../assets/businessPartner.png';
 
 const RelationshipHomeComp = () => {
 	return (
-		<div className="flex flex-wrap ss:px-4 md:px-8 ss:w-[355px] sm:w-full justify-between ss:mt-[90px] md:mt-[140px]">
+		<div className="flex flex-wrap ss:px-4 md:px-8 ss:w-[355px] sm:w-full justify-between ss:mt-[10px] md:mt-[30px]">
 			<div className="md:w-[51%] ss:w-full flex items-center justify-start">
 				<img
-					src={handshake}
+					src={BusPartnerImg}
 					alt="two business partners shaking hands"
 					className=""
 				/>
