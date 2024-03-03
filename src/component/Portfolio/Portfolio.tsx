@@ -21,18 +21,20 @@ const Portfolio = ({ data }: { data?: IDevProducts[] }) => {
 			<div className="flex flex-wrap ss:px-[8px] md:px-0 w-full ss:justify-between md:justify-around ss:text-[12px] md:text-[16px]">
 				{renderedData?.map((item, index) => (
 					<div key={index} className="ss:w-[120px] sm:w-[150px] md:w-auto">
-						<div
-							className="flex items-center justify-center ss:w-[167px] md:w-[296px] ss:h-[132px] md:h-[235px]"
-							style={{ boxShadow: "1px 1px 7px 0px #00000040" }}
-						>
-							{" "}
-							<img
-								src={item.logoPath}
-								alt="sales track app logo"
-								className="ss:w-[100px] md:w-auto"
-							/>
-						</div>{" "}
-						<p className="ss:mt-4 md:mt-8 font-semibold">{item.name}</p>
+						<Link to={item.productUrl} target="_blank">
+							<div
+								className="flex items-center justify-center ss:w-[167px] md:w-[296px] ss:h-[132px] md:h-[235px]"
+								style={{ boxShadow: "1px 1px 7px 0px #00000040" }}
+							>
+								{" "}
+								<img
+									src={item.logoPath}
+									alt="sales track app logo"
+									className="ss:w-[100px] md:w-auto"
+								/>
+							</div>{" "}
+							<p className="ss:mt-4 md:mt-8 font-semibold">{item.name}</p>
+						</Link>
 						<p className="ss:mt-4 md:mt-2 ss:w-full md:w-[290px] lg:w-[350px]">
 							{item.description} <strong>({item.clientName})</strong>
 						</p>

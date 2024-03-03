@@ -69,13 +69,14 @@ export const homeInitialStateData = {
 };
 
 export const homeDevProductsInitial = [
-	{
-		name: "",
-		description: "",
-		logoPath: "",
-		numberOfUsers: "",
-		clientName: "",
-	},
+  {
+    name: '',
+    description: '',
+    logoPath: '',
+    numberOfUsers: '',
+    clientName: '',
+    productUrl: ""
+  }
 ];
 
 export const teamInitial = [

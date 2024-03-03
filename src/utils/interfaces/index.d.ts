@@ -61,11 +61,12 @@ export interface IServicesHomeprops {
 }
 
 export interface IDevProducts {
-	name: string;
-	description: string;
-	logoPath: string;
-	numberOfUsers: string;
-	clientName: string;
+  name: string;
+  description: string;
+  logoPath: string;
+  numberOfUsers: string;
+  clientName: string;
+  productUrl: string
 }
 
 export interface ServiceProps {
