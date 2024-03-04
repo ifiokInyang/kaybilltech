@@ -1,5 +1,4 @@
 import React from "react";
-import salestrack from "../../assets/salestrack.svg";
 import viewMore from "../../assets/arrow-right.svg";
 import { Link } from "react-router-dom";
 import { IDevProducts } from "../../utils/interfaces";
