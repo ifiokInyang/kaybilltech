@@ -1,4 +1,7 @@
 import { IFormProps } from "./interfaces";
+import reviewOne from "../assets/review1.svg";
+import reviewTwo from "../assets/review2.svg";
+import reviewThree from "../assets/review3.svg";
 
 export const formField: IFormProps = {
 	firstName: "",
@@ -69,14 +72,14 @@ export const homeInitialStateData = {
 };
 
 export const homeDevProductsInitial = [
-  {
-    name: '',
-    description: '',
-    logoPath: '',
-    numberOfUsers: '',
-    clientName: '',
-    productUrl: ""
-  }
+	{
+		name: "",
+		description: "",
+		logoPath: "",
+		numberOfUsers: "",
+		clientName: "",
+		productUrl: "",
+	},
 ];
 
 export const teamInitial = [
@@ -89,5 +92,26 @@ export const teamInitial = [
 		name: "",
 		gitHubUserName: "",
 		twitterHandle: "",
+	},
+];
+
+export const testimonials = [
+	{
+		image: reviewOne,
+		text: "Excellent work to create our page they worked around the clock to get the site up and running to our standards I would recommend them to everyone that want a professional website at the best cost",
+		clientName: "Darligthon James",
+		position: "Manager",
+	},
+	{
+		image: reviewTwo,
+		text: "We approached them with a complex software project, and they delivered beyond our expectations. Their team exhibited exceptional technical prowess and dedication, ensuring every detail was meticulously handled. We're thoroughly impressed and would gladly collaborate with them again.",
+		clientName: "John Smith",
+		position: "CTO",
+	},
+	{
+		image: reviewThree,
+		text: "As a startup in the tech industry, finding a reliable partner to develop our app was crucial. They not only delivered a sleek and user-friendly application but also provided invaluable insights throughout the process. Their professionalism and expertise significantly contributed to our success.",
+		clientName: "Sarah Johnson",
+		position: "CEO",
 	},
 ];
