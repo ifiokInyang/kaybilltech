@@ -15,7 +15,7 @@ const HomeComp1 = ({ data }: { data: IHomeDataProps }) => {
 						? data.title
 						: "Develop your projects and scale your business"}
 				</h1>
-				<p className="pt-4 ss:pb-[40px] md:pb-[77px] ss:text-[12px] md:text-[18px] font-light ss:w-full md:w-[90%]">
+				<p className="pt-4 ss:pb-[40px] md:pb-[77px] ss:text-[16px] md:text-[18px] font-light ss:w-full md:w-[90%]">
 					{data.subTitle.length > 0
 						? data.subTitle
 						: "Empowering Your Future. We Digitize Business. Unraveling Business Challenges with Innovative Thinking and Technological Expertise."}

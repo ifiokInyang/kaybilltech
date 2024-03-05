@@ -1,12 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/kaybilllogo.svg";
-import SmallScreenModal from "../Modal/Modal";
+import SmallScreenModal from "../Modals/NavModal";
 import Button from "../Button/Button";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
-import AboutModal from "../Modal/AboutModal";
-import ServicesModal from "../Modal/ServicesModal";
+import AboutModal from "../Modals/AboutModal";
+import ServicesModal from "../Modals/ServicesModal";
 
 const Navbar = () => {
 	const [showModal, setShowModal] = React.useState(false);

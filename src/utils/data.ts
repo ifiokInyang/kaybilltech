@@ -115,3 +115,15 @@ export const testimonials = [
 		position: "CEO",
 	},
 ];
+
+
+export const logoInitialData = [
+	{
+		companyName: "",
+		companyLogo: "",
+		address: "",
+		city: "",
+		businessType: "",
+		clientId: 0
+	}
+]

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Portfolio from "../Portfolio/Portfolio";
 import Enquiry from "../Enquiry/Enquiry";
 import ServicesSubTwo from "../ServicesHomepage/ServicesSubTwo";
@@ -9,9 +9,42 @@ import ServicesSubThree from "../ServicesHomepage/ServicesSubThree";
 import ServicesSubFour from "../ServicesHomepage/ServicesSubFour";
 import ServicesSubSix from "../ServicesHomepage/ServicesSubSix";
 import ServicesSubOne from "../ServicesHomepage/ServicesSubOne";
+import { IDevProducts } from "../../utils/interfaces";
+import axios, { AxiosResponse } from "axios";
+import { apiUrl } from "../../utils/api/axios";
+import { homeDevProductsInitial } from "../../utils/data";
 
 const ServicesNavigation = () => {
 	const { service } = useParams();
+	const [developedProducts, setDevelopedProducts] = useState<IDevProducts[]>(
+		homeDevProductsInitial
+	);
+	const [loading, setLoading] = useState<boolean>(true);
+	const [error, setError] = useState<string | null>(null);
+
+	const HomeFunc: () => Promise<void> = async () => {
+		try {
+			const response: AxiosResponse<any, any> = await axios.get(
+				`${apiUrl}/api/KayService/HomePage-Contents`
+			);
+			const { data } = response.data;
+			if (response.status === 200) {
+				setLoading(false);
+				setDevelopedProducts(data.developedProducts);
+			}
+		} catch (err: any) {
+			setLoading(false);
+			setError("Something went wrong");
+		}
+	};
+
+	useEffect(() => {
+		async function fetchData() {
+			await HomeFunc();
+		}
+
+		void fetchData();
+	}, []);
 
 	return (
 		<>
@@ -37,7 +70,7 @@ const ServicesNavigation = () => {
 				<ServicesSubSix service="dbMgt" selectedItem={null} data={[]} />
 			)}
 
-			<Portfolio />
+			<Portfolio data={developedProducts} />
 			<Enquiry isQuotes={false} />
 		</>
 	);

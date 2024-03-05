@@ -4,7 +4,6 @@ import { testimonials } from "../../utils/data";
 
 const Reviews = () => {
 	const [activeTestimonial, setActiveTestimonial] = useState(0);
-	
 
 	const nextTestimonial = () => {
 		setActiveTestimonial((prevIndex) => (prevIndex + 1) % testimonials.length);
@@ -22,7 +21,7 @@ const Reviews = () => {
 				onClick={prevTestimonial}
 				className="absolute left-0 top-1/2 transform -translate-y-1/2 text-[#2979FF] font-medium border border-[#2979FF] px-4 py-2 rounded-lg transition-colors duration-300 hover:bg-[#2979FF] hover:text-white z-10"
 			>
-				<FiChevronLeft />
+				<FiChevronLeft className="text-[30px]" />
 			</button>
 			<div className="flex flex-col justify-center text-center ss:w-[355px] sm:w-full md:w-[700px]">
 				<h1 className="py-8 text-[16px] font-medium text-[#2979FF]">REVIEWS</h1>
@@ -74,7 +73,7 @@ const Reviews = () => {
 				onClick={nextTestimonial}
 				className="absolute right-0 top-1/2 transform -translate-y-1/2 text-[#2979FF] font-medium border border-[#2979FF] px-4 py-2 rounded-lg transition-colors duration-300 hover:bg-[#2979FF] hover:text-white z-10"
 			>
-				<FiChevronRight />
+				<FiChevronRight className="text-[30px]" />
 			</button>
 		</div>
 	);
