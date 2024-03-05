@@ -74,3 +74,13 @@ export interface ServiceProps {
 	selectedItem: number | null;
 	data: IServicesHomeprops[];
 }
+
+
+export interface ILogoProps {
+  companyName: string;
+  companyLogo: string;
+  address: string;
+  city: string;
+  businessType: string;
+  clientId: number;
+}

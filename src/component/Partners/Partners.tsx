@@ -1,43 +1,36 @@
-import React from "react";
-import harmony from "../../assets/harmony.svg";
-import avalanche from "../../assets/avalanche.svg";
-import simplex from "../../assets/simplex.svg";
-import polygon from "../../assets/polygon.svg";
-import binance from "../../assets/binance.svg";
-import nervos from "../../assets/nervos.svg";
-import "./pstyle.css"
+import React, { useState } from "react";
+import Slider from "react-slick";
+import { ILogoProps } from "../../utils/interfaces";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const ContinuousSlider = () => {
-	return (
-    <div className="logos">
-      <div className="logos-slide">
-        <img src={harmony} alt="" />
 
-        <img src={avalanche} alt="" />
+const ContinuousSlider = ({ logos }: { logos: ILogoProps[] }) => {
+	const [settings] = useState({
+		dots: true,
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		autoplay: true,
+		speed: 1000,
+		autoplaySpeed: 2000,
+		cssEase: "linear",
+	});
 
-        <img src={simplex} alt="" width={'114px'} />
-
-        <img src={polygon} alt="" />
-
-        <img src={binance} alt="" />
-
-        <img src={nervos} alt="" width={'70px'} />
-      </div>
-      <div className="logos-slider">
-        <img src={harmony} alt="" />
-
-        <img src={avalanche} alt="" />
-
-        <img src={simplex} alt="" width={'114px'} />
-
-        <img src={polygon} alt="" />
-
-        <img src={binance} alt="" />
-
-        <img src={nervos} alt="" width={'70px'} />
-      </div>
-    </div>
-  );
+  return (
+		<div className="ss:my-12 md:my-20">
+			<Slider {...settings}>
+				{logos.map((logo, index) => (
+					<div key={index} className="container">
+						<img
+							src={logo.companyLogo}
+							alt={logo.companyName + "logo"}
+							className="ss:w-20 ss:h-20 md:w-40 md:h-40 object-contain"
+						/>
+					</div>
+				))}
+			</Slider>
+		</div>
+	);
 };
-
 export default ContinuousSlider;
