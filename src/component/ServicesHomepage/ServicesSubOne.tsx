@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
-import ServicesFeatures from "./ServicesFeatures";
+import ServicesFeatures from "./ServicesComponent/ServicesFeatures";
 import { ServiceProps } from "../../utils/interfaces";
 import apiDevImg from "../../assets/apidevcover.svg";
 import uiuxHomeImg from "../../assets/uiuxCover.svg";
@@ -10,10 +10,16 @@ import aspDotNetHomeImg from "../../assets/aspDotNetCover.svg";
 import webDesignImg from "../../assets/webDesignCover.svg";
 import customSoftwareImg from "../../assets/customSoftwareCover.svg";
 import dbHomeImg from "../../assets/dbCover.svg";
+import { useAuth } from "../../context";
 
-const ServicesSubOne = ({ service, selectedItem, data }: ServiceProps) => {
+const ServicesSubOne = ({ service }: ServiceProps) => {
+	const { selectedItem, homeDataArray, HomeDataFunc } = useAuth() as any;
 	const navigate = useNavigate();
-	const selectedItemData = selectedItem !== null ? data[selectedItem] : null;
+
+	const selectedItemData =
+		homeDataArray.ourServices !== undefined
+			? homeDataArray.ourServices[selectedItem]
+			: null;
 
 	const images = [
 		apiDevImg,
@@ -25,6 +31,9 @@ const ServicesSubOne = ({ service, selectedItem, data }: ServiceProps) => {
 		aspDotNetHomeImg,
 	];
 
+	useEffect(() => {
+		HomeDataFunc();
+	}, []);
 	return (
 		<div
 			className={`bg-[#F3F7FF] flex flex-wrap ss:px-4 ${
@@ -49,7 +58,7 @@ const ServicesSubOne = ({ service, selectedItem, data }: ServiceProps) => {
 				</p>
 
 				<div className="font-bold flex flex-wrap gap-8 my-8">
-					<ServicesFeatures />
+					<ServicesFeatures selectedItem={selectedItem} />
 				</div>
 				<div className="my-[60px]">
 					<Button

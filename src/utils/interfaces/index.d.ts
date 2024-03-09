@@ -30,7 +30,7 @@ export interface TeamProps {
 	linkedInUserName: string;
 	name: string;
 	gitHubUserName: string;
-	twitterHandle: string
+	twitterHandle: string;
 }
 export interface TeamModalSScreenProps {
 	teamsModal: boolean;
@@ -58,29 +58,46 @@ export interface IServicesHomeprops {
 	category: string;
 	description: string;
 	serviceTitle: string;
+	serviceId: string;
+	serviceFeatures: string[];
 }
 
 export interface IDevProducts {
-  name: string;
-  description: string;
-  logoPath: string;
-  numberOfUsers: string;
-  clientName: string;
-  productUrl: string
+	name: string;
+	description: string;
+	logoPath: string;
+	numberOfUsers: string;
+	clientName: string;
+	productUrl: string;
 }
 
 export interface ServiceProps {
 	service?: string;
-	selectedItem: number | null;
-	data: IServicesHomeprops[];
 }
 
-
 export interface ILogoProps {
-  companyName: string;
-  companyLogo: string;
-  address: string;
-  city: string;
-  businessType: string;
-  clientId: number;
+	companyName: string;
+	companyLogo: string;
+	address: string;
+	city: string;
+	businessType: string;
+	clientId: number;
+}
+
+export interface ServicesProps {
+	serviceTitle: string;
+	description: string;
+	category: string;
+	serviceId: number;
+	serviceFeatures: string[];
+}
+export interface BackEndData {
+	clientTestimonies: null;
+	developedProducts: IDevProducts[];
+	homeHero: IHomeDataProps;
+	ourClients: ILogoProps[];
+	ourServices: IServicesHomeprops[];
+	teamMembers: TeamProps;
+	status: boolean;
+	statusCode: number;
 }

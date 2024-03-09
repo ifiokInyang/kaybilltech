@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ApiDevSvg from "./ApiDevSvg";
 import CustomSoftwareSvg from "./CustomSoftwareSvg";
 import WebDesignSvg from "./WebDesignSvg";
@@ -7,22 +7,24 @@ import UiUxSvg from "./UiUxSvg";
 import DatabaseMgtSvg from "./DatabaseMgtSvg";
 import AspdotnetSvg from "./AspdotnetSvg";
 import { IServicesHomeprops } from "../../utils/interfaces";
+import { useAuth } from "../../context";
 
 const Svg = ({
-	selectedItem,
 	handleItemClick,
-	data,
 }: {
-	selectedItem: number | null;
 	handleItemClick: (index: number) => void;
-	data: IServicesHomeprops[];
 }) => {
+	const { selectedItem, homeDataArray, HomeDataFunc } = useAuth() as any;
+
+
+	// console.log("homeeeee is ", homeDataArray)
 	const getServiceItemStyle = (index: number) => {
 		return {
 			backgroundColor: selectedItem === index ? "black" : "white",
 			color: selectedItem === index ? "white" : "black",
 		};
 	};
+
 
 	return (
 		<div className="flex flex-wrap mt-8 ss:px-4 md:px-8 ss:h-[600px] md:h-auto justify-between text-center">
@@ -37,13 +39,13 @@ const Svg = ({
 			].map((svg, index) => (
 				<div
 					key={index}
-					className="h-[131px] ss:w-[155px] md:w-[171px] rounded-lg cursor-pointer flex flex-col items-center justify-center"
+					className="h-[131px] ss:w-[155px] md:w-[171px] mb-8 rounded-lg cursor-pointer flex flex-col items-center justify-center"
 					style={getServiceItemStyle(index)}
 					onClick={() => handleItemClick(index)}
 				>
 					{svg}
 					<h4 style={{ whiteSpace: "pre-line", paddingTop: "12px" }}>
-						{data[index]?.serviceTitle}
+						{homeDataArray.ourServices !== undefined && homeDataArray.ourServices[index].serviceTitle}
 					</h4>
 				</div>
 			))}

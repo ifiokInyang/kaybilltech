@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { teamMembers } from "./TeamArray";
 import { TeamProps } from "../../utils/interfaces";
 import linkedIn from "../../assets/linkedInIcon.svg";
 import { teamInitial } from "../../utils/data";

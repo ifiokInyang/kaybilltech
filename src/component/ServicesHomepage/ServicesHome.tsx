@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import ServicesSubOne from "./ServicesSubOne";
 import Services from "./Services";
 import { IServicesHomeprops } from "../../utils/interfaces";
+import { useAuth } from "../../context";
 
-const ServicesHome = ({ data }: { data: IServicesHomeprops[] }) => {
-	const [selectedItem, setSelectedItem] = useState<null | number>(null);
+const ServicesHome = () => {
+	const { selectedItem, setSelectedItem } = useAuth() as any;
 
 	const handleItemClick = (index: number) => {
 		setSelectedItem(index);
@@ -15,13 +16,8 @@ const ServicesHome = ({ data }: { data: IServicesHomeprops[] }) => {
 	}, []);
 	return (
 		<>
-			<Services
-				selectedItem={selectedItem}
-				setSelectedItem={setSelectedItem}
-				handleItemClick={handleItemClick}
-				data={data}
-			/>
-			{<ServicesSubOne selectedItem={selectedItem} data={data} />}
+			<Services handleItemClick={handleItemClick} />
+			{<ServicesSubOne />}
 		</>
 	);
 };

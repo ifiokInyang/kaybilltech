@@ -2,6 +2,12 @@ import { IFormProps } from "./interfaces";
 import reviewOne from "../assets/review1.svg";
 import reviewTwo from "../assets/review2.svg";
 import reviewThree from "../assets/review3.svg";
+import apiDev from "../assets/api.svg";
+import webDesign from "../assets/webDesign.svg";
+import webAndMob from "../assets/web&mob.svg";
+import uiuxIcon from "../assets/uiux.svg";
+import databaseMgt from "../assets/databaseMgt.svg";
+import asp from "../assets/aspNavigation.svg";
 
 export const formField: IFormProps = {
 	firstName: "",
@@ -116,7 +122,6 @@ export const testimonials = [
 	},
 ];
 
-
 export const logoInitialData = [
 	{
 		companyName: "",
@@ -124,6 +129,94 @@ export const logoInitialData = [
 		address: "",
 		city: "",
 		businessType: "",
-		clientId: 0
-	}
-]
+		clientId: 0,
+	},
+];
+
+export const servicesData = [
+	{
+		name: "API Development",
+	},
+	{
+		name: "Custom Software Development",
+	},
+	{
+		name: "Website Design",
+	},
+	{
+		name: "UI/UX Design",
+	},
+	{
+		name: "Web & Mobile Application Development",
+	},
+	{
+		name: "Database Management",
+	},
+	{
+		name: "ASP.NET Training",
+	},
+];
+
+export const services = [
+	"api",
+	"softwareDev",
+	"webDesign",
+	"uiux",
+	"webAndMobDev",
+	"dbMgt",
+	"aspdotnet",
+];
+
+export const serviceModalData = [
+	{
+		img: apiDev,
+		alt: "api development icon",
+		title: "API Development",
+		description: "API attribution and development",
+		service: "api",
+	},
+	{
+		img: apiDev,
+		alt: "software development icon",
+		title: "Custom Software Development",
+		description: "Swift software development",
+		service: "softwareDev",
+	},
+
+	{
+		img: webDesign,
+		alt: "website development icon",
+		title: "Website design",
+		description: "Website with cool features",
+		service: "webDesign",
+	},
+	{
+		img: uiuxIcon,
+		alt: "UI/UX design icon",
+		title: "UI/UX Design",
+		description: "Unique product designs",
+		service: "uiux",
+	},
+	{
+		img: webAndMob,
+		alt: "Web and mobile application development icon",
+		title: "Web and Mobile App Development",
+		description: "We develop web & mobile applications",
+		service: "webAndMobDev",
+	},
+
+	{
+		img: databaseMgt,
+		alt: "Database management icon",
+		title: "Database Management",
+		description: "We manage database",
+		service: "dbMgt",
+	},
+	{
+		img: asp,
+		alt: "ASP.NET training icon",
+		title: "ASP.NET Training",
+		description: "We do ASP.NET training",
+		service: "aspdotnet",
+	},
+];
