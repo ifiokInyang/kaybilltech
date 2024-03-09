@@ -8,7 +8,13 @@ import webAndMob from "../assets/web&mob.svg";
 import uiuxIcon from "../assets/uiux.svg";
 import databaseMgt from "../assets/databaseMgt.svg";
 import asp from "../assets/aspNavigation.svg";
+import { CSSProperties } from "react";
 
+export const override: CSSProperties = {
+	display: "block",
+	margin: "50% auto",
+	borderColor: "#0c1345",
+};
 export const formField: IFormProps = {
 	firstName: "",
 	lastName: "",

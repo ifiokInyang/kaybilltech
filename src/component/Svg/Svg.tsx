@@ -16,8 +16,6 @@ const Svg = ({
 }) => {
 	const { selectedItem, homeDataArray, HomeDataFunc } = useAuth() as any;
 
-
-	// console.log("homeeeee is ", homeDataArray)
 	const getServiceItemStyle = (index: number) => {
 		return {
 			backgroundColor: selectedItem === index ? "black" : "white",
