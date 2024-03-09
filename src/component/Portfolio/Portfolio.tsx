@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import viewMore from "../../assets/arrow-right.svg";
 import { Link } from "react-router-dom";
 import { IDevProducts } from "../../utils/interfaces";
+import Loading from "../Loader/Loading";
 
 const Portfolio = ({ data }: { data?: IDevProducts[] }) => {
+	const [loading, setLoading] = useState<boolean>(true);
+	const [loadedImages, setLoadedImages] = useState<number>(0);
+
+	useEffect(() => {
+		// Check if all images have been loaded
+		if (data?.length !== undefined && data?.length > 0) {
+			setLoading(false); // Set loading to false when all images are loaded
+		}
+	}, [loadedImages, data]);
+
+	const handleImageLoad = () => {
+		setLoadedImages((prevCount) => prevCount + 1); // Increment loadedImages count when an image is loaded
+	};
+
 	const renderedData =
 		data?.length !== undefined && data.length > 4 ? data.slice(0, 4) : data;
 
@@ -17,21 +32,26 @@ const Portfolio = ({ data }: { data?: IDevProducts[] }) => {
 					Developed Products
 				</h1>
 			</div>
+
 			<div className="flex flex-wrap ss:px-[8px] md:px-0 w-full ss:justify-between md:justify-around ss:text-[12px] md:text-[16px]">
 				{renderedData?.map((item, index) => (
 					<div key={index} className="ss:w-[120px] sm:w-[150px] md:w-auto">
 						<Link to={item.productUrl} target="_blank">
-							<div
-								className="flex items-center justify-center ss:w-[167px] md:w-[296px] ss:h-[132px] md:h-[235px]"
-								style={{ boxShadow: "1px 1px 7px 0px #00000040" }}
-							>
-								{" "}
-								<img
-									src={item.logoPath}
-									alt="sales track app logo"
-									className="ss:w-[100px] md:w-auto"
-								/>
-							</div>{" "}
+							{loading ? (
+								<Loading loading={loading} />
+							) : (
+								<div
+									className="flex items-center justify-center ss:w-[167px] md:w-[296px] ss:h-[132px] md:h-[235px]"
+									style={{ boxShadow: "1px 1px 7px 0px #00000040" }}
+								>
+									<img
+										src={item.logoPath}
+										alt="sales track app logo"
+										className="ss:w-[100px] md:w-auto"
+										onLoad={() => setLoading(false)} // Call handleImageLoad when the image is loaded
+									/>
+								</div>
+							)}
 							<p className="ss:mt-4 md:mt-8 font-semibold">{item.name}</p>
 						</Link>
 						<p className="ss:mt-4 md:mt-2 ss:w-full md:w-[290px] lg:w-[350px]">
