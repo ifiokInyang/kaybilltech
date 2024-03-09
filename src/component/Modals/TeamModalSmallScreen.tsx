@@ -1,7 +1,9 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { TeamModalSScreenProps } from "../../utils/interfaces";
-import { serviceFunc } from "./ServicesHelperFunc";
+import { ServiceFunc } from "./ServicesHelperFunc";
+import { useAuth } from "../../context";
+import { services, servicesData } from "../../utils/data";
 
 const TeamModalSmallScreen = ({
 	teamsModal,
@@ -11,10 +13,15 @@ const TeamModalSmallScreen = ({
 }: TeamModalSScreenProps) => {
 	const navigate = useNavigate();
 
-	const handleServiceNavigation = (service: string) => {
+	const { setSelectedItem } = useAuth() as any;
+
+	const handleServiceNavigation = (index: number) => {
 		setIsSmallScreenServicesModal(false);
-		serviceFunc(service, navigate);
+		setSelectedItem(index);
+		ServiceFunc(services[index], navigate);
 	};
+
+	
 
 	return (
 		<div>
@@ -60,48 +67,15 @@ const TeamModalSmallScreen = ({
 									</span>
 								</button>
 							</div>
-							<div
-								className="my-2 block p-8 text-black md:mx-0"
-								onClick={() => handleServiceNavigation("api")}
-							>
-								API Development
-							</div>
-							<div
-								className="my-2 block p-8 text-black md:mx-0"
-								onClick={() => handleServiceNavigation("softwareDev")}
-							>
-								Custom Software Development
-							</div>{" "}
-							<div
-								className="my-2 block p-8 text-black md:mx-0"
-								onClick={() => handleServiceNavigation("webDesign")}
-							>
-								Website Design
-							</div>{" "}
-							<div
-								className="my-2 block p-8 text-black md:mx-0"
-								onClick={() => handleServiceNavigation("webAndMobDev")}
-							>
-								Web & Mobile Application Development
-							</div>{" "}
-							<div
-								className="my-2 block p-8 text-black md:mx-0"
-								onClick={() => handleServiceNavigation("uiux")}
-							>
-								UI/UX Design
-							</div>{" "}
-							<div
-								className="my-2 block p-8 text-black md:mx-0"
-								onClick={() => handleServiceNavigation("dbMgt")}
-							>
-								Database Management
-							</div>{" "}
-							<div
-								className="my-2 block p-8 text-black md:mx-0"
-								onClick={() => handleServiceNavigation("aspdotnet")}
-							>
-								ASP.NET Training
-							</div>
+							{servicesData.map((service, index) => (
+								<div
+									key={index}
+									className="my-2 block p-8 text-black md:mx-0 cursor-pointer"
+									onClick={() => handleServiceNavigation(index)}
+								>
+									{service.name}
+								</div>
+							))}
 						</div>
 					</div>
 					<div className="fixed inset-0 z-40 bg-black"></div>

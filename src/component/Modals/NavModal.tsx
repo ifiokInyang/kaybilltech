@@ -56,7 +56,7 @@ export default function SmallScreenModal({
 										<h3 className="text-[14px] font-medium">Home</h3>
 									</Link>
 								</div>
-								<div className="flex w-[58%] items-start justify-between p-5 mb-4 rounded-t">
+								<div className="flex w-[127px] items-start justify-between p-5 mb-4 rounded-t">
 									<Link to={"/about"} onClick={() => setShowModal(false)}>
 										<h3 className="text-[14px] hover:text-black">About us</h3>
 									</Link>

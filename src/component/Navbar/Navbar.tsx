@@ -6,7 +6,7 @@ import Button from "../Button/Button";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
 import AboutModal from "../Modals/AboutModal";
-import ServicesModal from "../Modals/ServicesModal";
+import ServicesModal from "../Modals/FullScreenServiceModal";
 
 const Navbar = () => {
 	const [showModal, setShowModal] = React.useState(false);

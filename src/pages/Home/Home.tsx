@@ -13,6 +13,7 @@ import { useAuth } from "../../context";
 import axios, { AxiosResponse } from "axios";
 import { apiUrl } from "../../utils/api/axios";
 import {
+	BackEndData,
 	IDevProducts,
 	IHomeDataProps,
 	ILogoProps,
@@ -27,60 +28,67 @@ import {
 } from "../../utils/data";
 
 const Home = () => {
-	// const { HomeDataFunc, homeData } = useAuth as any;
+  const { HomeDataFunc, homeDataArray } = useAuth() as any;
 
-	// useEffect(() => {
-	// 	async function fetchData() {
-	// 		await HomeDataFunc();
-	// 	}
-	// 	void fetchData();
-	// }, []);
-	const [homeData, setHomeData] =
-		useState<IHomeDataProps>(homeInitialStateData);
-	const [servicesData, setServicesData] = useState<IServicesHomeprops[]>([
-		{ serviceTitle: "", description: "", category: "" },
-	]);
-	const [developedProducts, setDevelopedProducts] = useState<IDevProducts[]>(
-		homeDevProductsInitial
-	);
-	const [logoData, setLogoData] = useState<ILogoProps[]>(logoInitialData);
+  useEffect(() => {
+    HomeDataFunc();
+  }, []);
 
-	const [team, setTeam] = useState<TeamProps[]>(teamInitial);
-	const [loading, setLoading] = useState<boolean>(true);
-	const [error, setError] = useState<string | null>(null);
 
-	const HomeFunc: () => Promise<void> = async () => {
-		try {
-			const response: AxiosResponse<any, any> = await axios.get(
-				`${apiUrl}/api/KayService/HomePage-Contents`
-			);
-			const { data } = response.data;
-			if (response.status === 200) {
-				setLoading(false);
-				setHomeData(data.homeHero);
-				setServicesData(data.ourServices);
-				setDevelopedProducts(data.developedProducts);
-				setTeam(data.teamMembers);
-				setLogoData(data.ourClients);
-			}
-		} catch (err: any) {
-			setLoading(false);
-			setError("Something went wrong");
-		}
-	};
+console.log("homedataArray is ", homeDataArray)
+  const [homeData, setHomeData] =
+    useState<IHomeDataProps>(homeInitialStateData);
+  const [servicesData, setServicesData] = useState<IServicesHomeprops[]>([
+    {
+      serviceId: '',
+      serviceTitle: '',
+      description: '',
+      category: '',
+      serviceFeatures: []
+    }
+  ]);
+  const [developedProducts, setDevelopedProducts] = useState<IDevProducts[]>(
+    homeDevProductsInitial
+  );
+  const [logoData, setLogoData] = useState<ILogoProps[]>(logoInitialData);
 
-	useEffect(() => {
-		async function fetchData() {
-			await HomeFunc();
-		}
+  const [team, setTeam] = useState<TeamProps[]>(teamInitial);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
-		void fetchData();
-	}, []);
-	return (
+  const HomeFunc: () => Promise<void> = async () => {
+    try {
+      const response: AxiosResponse<any, any> = await axios.get(
+        `${apiUrl}/api/KayService/HomePage-Contents`
+      );
+      const { data } = response.data;
+      console.log('data in home page is ', data);
+      if (response.status === 200) {
+        setLoading(false);
+        setHomeData(data.homeHero);
+        setServicesData(data.ourServices);
+        setDevelopedProducts(data.developedProducts);
+        setTeam(data.teamMembers);
+        setLogoData(data.ourClients);
+      }
+    } catch (err: any) {
+      setLoading(false);
+      setError('Something went wrong');
+    }
+  };
+
+  useEffect(() => {
+    async function fetchData() {
+      await HomeFunc();
+    }
+
+    void fetchData();
+  }, []);
+  return (
     <>
       <HomeComp1 data={homeData} />
       <LogoSlider logos={logoData} />
-      <ServicesHome data={servicesData} />
+      <ServicesHome />
       <BusScalability />
       <RelationshipHomeComp />
       <WhyUs data={homeData} />
