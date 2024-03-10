@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import ServicesSubOne from "./ServicesSubOne";
 import Services from "./Services";
-import { IServicesHomeprops } from "../../utils/interfaces";
 import { useAuth } from "../../context";
 
 const ServicesHome = () => {
-	const { selectedItem, setSelectedItem } = useAuth() as any;
+	const { setSelectedItem } = useAuth() as any;
 
 	const handleItemClick = (index: number) => {
 		setSelectedItem(index);

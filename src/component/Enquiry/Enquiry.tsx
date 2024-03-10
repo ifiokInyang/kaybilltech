@@ -43,4 +43,3 @@ const Enquiry = ({ isQuotes }: { isQuotes: boolean }) => {
 
 export default Enquiry;
 
-// ss:w-[400px] sm:w-auto ss:mb-16 ss:mr-0 lg:mr-8

@@ -23,13 +23,12 @@ export interface ServicesModalProp {
 }
 
 export interface TeamProps {
-	profileImagePath: string;
-	position: string;
-	linkedProfileUrl: string;
-	memberId: string;
-	linkedInUserName: string;
-	name: string;
 	gitHubUserName: string;
+	linkedInUserName: string;
+	linkedProfileUrl: string;
+	memberId: number;
+	position: string;
+	profileImagePath: string;
 	twitterHandle: string;
 }
 export interface TeamModalSScreenProps {
@@ -48,9 +47,9 @@ export interface IFormProps {
 }
 
 export interface IHomeDataProps {
+	title: string;
 	description: string;
 	subTitle: string;
-	title: string;
 	whyUs: string;
 }
 
