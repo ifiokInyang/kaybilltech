@@ -3,7 +3,6 @@ import { apiUrl } from "../utils/api/axios";
 import axios, { AxiosResponse } from "axios";
 import { BackEndData } from "../utils/interfaces";
 
-interface IHomeDataProps {}
 export interface GlobalStateInterface {
   HomeDataFunc: () => Promise<void>;
   homeDataArray: BackEndData[];

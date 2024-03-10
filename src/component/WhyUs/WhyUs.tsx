@@ -2,8 +2,11 @@ import React from "react";
 import CountUp from "react-countup";
 import blueCircle from "../../assets/blueCircle.svg";
 import { IHomeDataProps } from "../../utils/interfaces";
+import { useAuth } from "../../context";
 
-const WhyUs = ({ data }: { data: IHomeDataProps }) => {
+const WhyUs = () => {
+	const { homeDataArray } = useAuth() as any;
+
 	return (
 		<div className="flex flex-col flex-wrap ss:px-4 md:px-8 ss:mt-[40px] md:mt-2 ss:w-[355px] sm:w-full justify-between">
 			<div className="flex-1">
@@ -13,8 +16,8 @@ const WhyUs = ({ data }: { data: IHomeDataProps }) => {
 					Why Choose us?{" "}
 				</h1>
 				<p className="font-light text-[#39404F] text-[18px] text-left ss:w-full md:w-[52%] ss:mb-24 md:mb-0">
-					{data.whyUs.length > 0
-						? data.whyUs
+					{homeDataArray.length > 0
+						? homeDataArray.whyUs
 						: "Our range of services is tailored for businesses seeking to establish a robust online presence and enhance their online visibility. Our overarching philosophy centers on simplifying the lives of business owners by providing a comprehensive suite of services that seamlessly complement each other. This includes services such as website development, web design, UI/UX design, database management, and custom software development."}
 				</p>
 			</div>
